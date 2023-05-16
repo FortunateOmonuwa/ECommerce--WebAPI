@@ -1,12 +1,14 @@
 ﻿using AutoMapper;
 using DataAccess.DTO.OrdersDTO;
 using Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Service.OrderContract;
 
 namespace E_Commerce_WebAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class OrderController : ControllerBase
